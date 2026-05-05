@@ -1,0 +1,180 @@
+/* ==========================================
+   🌍 GLOBAL STYLES
+========================================== */
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #0b0f1a;
+  color: #e5e7eb;
+}
+
+/* ==========================================
+   📦 MAIN CONTAINER
+========================================== */
+.app-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ==========================================
+   🧾 HEADER
+========================================== */
+.app-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #ff1f3d;
+}
+
+/* ==========================================
+   🎛️ CONTROLS
+========================================== */
+.controls-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin-bottom: 25px;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.control-group label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #9ca3af;
+}
+
+.control-input {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #374151;
+  background: #111827;
+  color: #e5e7eb;
+}
+
+.control-input:focus {
+  outline: none;
+  border-color: #ff1f3d;
+  box-shadow: 0 0 6px rgba(255, 31, 61, 0.5);
+}
+
+/* ==========================================
+   📊 KPI CARDS
+========================================== */
+.kpi-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.kpi-card {
+  background: #111827;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #1f2937;
+  transition: 0.25s;
+}
+
+.kpi-card:hover {
+  transform: translateY(-4px);
+  border-color: #ff1f3d;
+}
+
+.kpi-card h3 {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.kpi-card p {
+  margin-top: 10px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ff4d4d;
+}
+
+/* ==========================================
+   📊 MAIN GRID (KEY UPGRADE)
+========================================== */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* ==========================================
+   🗺️ MAP
+========================================== */
+.map-container {
+  position: relative;
+  background: #111827;
+  border-radius: 14px;
+  padding: 10px;
+  border: 1px solid #1f2937;
+}
+
+.map-container .leaflet-container {
+  border-radius: 12px;
+  height: 520px;
+  width: 100%;
+}
+
+/* ==========================================
+   📊 CHART
+========================================== */
+.chart-container {
+  background: #111827;
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid #1f2937;
+}
+
+/* ==========================================
+   💡 INSIGHTS
+========================================== */
+.insights-container {
+  margin-top: 20px;
+  background: #111827;
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid #1f2937;
+}
+
+.insights-container h2 {
+  color: #ff4d4d;
+}
+
+/* ==========================================
+   🗺️ LEGEND
+========================================== */
+.map-legend {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #0b0f1a;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #1f2937;
+}
+
+.map-legend span {
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+/* ==========================================
+   ⚠️ STATUS
+========================================== */
+.status-text {
+  margin-top: 10px;
+  color: #9ca3af;
+}
