@@ -43,18 +43,23 @@ export default function MapView({ data }) {
   // 📍 LOAD GEOJSON FROM BACKEND
   // ==========================================
   useEffect(() => {
-    fetch("http://localhost:5000/api/geo/wards")
-      .then((res) => res.json())
-      .then((json) => {
-        console.log("✅ GeoJSON loaded:", json.features.length);
-        setGeoData(json);
-      })
-      .catch((err) => {
-        console.error("❌ Geo fetch error:", err);
-        setGeoError(true);
-      });
-  }, []);
 
+  const API =
+    process.env.REACT_APP_API_URL ||
+    "http://localhost:5000/api";
+
+  fetch(`${API}/geo/wards`)
+    .then((res) => res.json())
+    .then((json) => {
+      console.log("✅ GeoJSON loaded:", json.features.length);
+      setGeoData(json);
+    })
+    .catch((err) => {
+      console.error("❌ Geo fetch error:", err);
+      setGeoError(true);
+    });
+
+}, []);
   // ==========================================
   // ⚠️ NO DATA
   // ==========================================
